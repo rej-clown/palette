@@ -71,7 +71,7 @@ stock void PrintToChatAll_palette(const char[] p, any ...) {
     int rps[MAXPLAYERS+1];
     ArrayList texts = new ArrayList(512, 0);
 
-    for(int i; i <= MaxClients; i++) {
+    for(int i = 1; i <= MaxClients; i++) {
         if(!IsClientInGame(i) || (IsFakeClient(i) && !IsClientSourceTV(i)))
             continue;
         
